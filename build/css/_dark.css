@@ -1,0 +1,38 @@
+/* [data-theme="dark"] */
+[data-theme="dark"] {
+  --colour-text-primary: var(--neutral-50);
+  --colour-text-secondary: var(--neutral-200);
+  --colour-text-tertiary: var(--neutral-300);
+  --colour-text-disabled: var(--neutral-700);
+  --colour-text-inverse: var(--neutral-900);
+  --colour-text-brand: var(--blue-300);
+  --colour-text-link: var(--blue-300);
+  --colour-text-link-hover: var(--blue-200);
+  --colour-text-on-accent: var(--neutral-900);
+  --colour-text-on-brand: var(--neutral-0);
+  --colour-surface-page: var(--neutral-950);
+  --colour-surface-default: var(--neutral-900);
+  --colour-surface-secondary: var(--neutral-900);
+  --colour-surface-elevated: var(--neutral-800);
+  --colour-surface-inverse: var(--neutral-50);
+  --colour-surface-overlay: rgba(12, 17, 17, 0.7);
+  --colour-surface-brand: var(--blue-500);
+  --colour-surface-accent: var(--yellow-500);
+  --colour-border-default: var(--neutral-800);
+  --colour-border-focus: var(--blue-400);
+  --colour-border-strong: var(--neutral-500);
+  --colour-action-default: var(--blue-500);
+  --colour-action-hover: var(--blue-300);
+  --colour-action-pressed: var(--blue-200);
+  --colour-action-disabled: var(--neutral-700);
+  --colour-accent-highlight: var(--yellow-500);
+  --colour-accent-highlight-subtle: var(--yellow-300);
+  --colour-feedback-success-text: var(--green-100);
+  --colour-feedback-success-surface: var(--green-700);
+  --colour-feedback-warning-text: var(--yellow-50);
+  --colour-feedback-warning-surface: var(--yellow-900);
+  --colour-feedback-error-text: var(--red-100);
+  --colour-feedback-error-surface: var(--red-700);
+  --colour-feedback-info-text: var(--blue-200);
+  --colour-feedback-info-surface: var(--blue-800);
+}

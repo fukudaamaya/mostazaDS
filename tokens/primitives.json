@@ -1,0 +1,72 @@
+{
+  "neutral": {
+    "0":   { "$value": "#FFFFFF", "$type": "color", "$description": "Primitive neutral ramp step. Raw value — reference via semantic tokens, not directly." },
+    "50":  { "$value": "#FAFAFA", "$type": "color", "$description": "Primitive neutral ramp step. Raw value — reference via semantic tokens, not directly." },
+    "100": { "$value": "#F3F3F3", "$type": "color", "$description": "Primitive neutral ramp step. Raw value — reference via semantic tokens, not directly." },
+    "200": { "$value": "#D0D2D2", "$type": "color", "$description": "Primitive neutral ramp step. Raw value — reference via semantic tokens, not directly." },
+    "300": { "$value": "#9FA2A2", "$type": "color", "$description": "Primitive neutral ramp step. Raw value — reference via semantic tokens, not directly." },
+    "400": { "$value": "#828686", "$type": "color", "$description": "Primitive neutral ramp step. Raw value — reference via semantic tokens, not directly." },
+    "500": { "$value": "#737777", "$type": "color", "$description": "Primitive neutral ramp step. Raw value — reference via semantic tokens, not directly." },
+    "600": { "$value": "#5F6363", "$type": "color", "$description": "Primitive neutral ramp step. Raw value — reference via semantic tokens, not directly." },
+    "700": { "$value": "#444949", "$type": "color", "$description": "Primitive neutral ramp step. Raw value — reference via semantic tokens, not directly." },
+    "800": { "$value": "#2D3333", "$type": "color", "$description": "Primitive neutral ramp step. Raw value — reference via semantic tokens, not directly." },
+    "900": { "$value": "#161D1D", "$type": "color", "$description": "Primitive neutral ramp step. Raw value — reference via semantic tokens, not directly." },
+    "950": { "$value": "#0C1111", "$type": "color", "$description": "Primitive neutral ramp step. Raw value — reference via semantic tokens, not directly." }
+  },
+  "blue": {
+    "50":  { "$value": "#EAEEFF", "$type": "color", "$description": "Primitive brand-blue ramp step. Raw value — reference via semantic tokens." },
+    "100": { "$value": "#D2DCFE", "$type": "color", "$description": "Primitive brand-blue ramp step. Raw value — reference via semantic tokens." },
+    "200": { "$value": "#B0C2FD", "$type": "color", "$description": "Primitive brand-blue ramp step. Raw value — reference via semantic tokens." },
+    "300": { "$value": "#7E9AFA", "$type": "color", "$description": "Primitive brand-blue ramp step. Raw value — reference via semantic tokens." },
+    "400": { "$value": "#4470F5", "$type": "color", "$description": "Primitive brand-blue ramp step. Raw value — reference via semantic tokens." },
+    "500": { "$value": "#0B43EA", "$type": "color", "$description": "Primitive brand-blue ramp step. Raw value — reference via semantic tokens." },
+    "600": { "$value": "#0937CC", "$type": "color", "$description": "Primitive brand-blue ramp step. Raw value — reference via semantic tokens." },
+    "700": { "$value": "#0A2B99", "$type": "color", "$description": "Primitive brand-blue ramp step. Raw value — reference via semantic tokens." },
+    "800": { "$value": "#0A2276", "$type": "color", "$description": "Primitive brand-blue ramp step. Raw value — reference via semantic tokens." },
+    "900": { "$value": "#0A1A54", "$type": "color", "$description": "Primitive brand-blue ramp step. Raw value — reference via semantic tokens." }
+  },
+  "yellow": {
+    "50":  { "$value": "#FFF8E1", "$type": "color", "$description": "Primitive accent-yellow step. Fills/highlights behind dark text only — never text." },
+    "100": { "$value": "#FFEDB3", "$type": "color", "$description": "Primitive accent-yellow step. Fills/highlights behind dark text only — never text." },
+    "300": { "$value": "#FEDC6B", "$type": "color", "$description": "Primitive accent-yellow step. Fills/highlights behind dark text only — never text." },
+    "500": { "$value": "#FECA2A", "$type": "color", "$description": "Primitive accent-yellow step. Fills/highlights behind dark text only — never text." },
+    "700": { "$value": "#C79A0F", "$type": "color", "$description": "Primitive accent-yellow step. Fills/highlights behind dark text only — never text." },
+    "900": { "$value": "#7A5D00", "$type": "color", "$description": "Primitive accent-yellow step. Fills/highlights behind dark text only — never text." }
+  },
+  "green": {
+    "100": { "$value": "#D8F3E3", "$type": "color", "$description": "Primitive feedback color. Reference via colour/feedback/* tokens." },
+    "500": { "$value": "#1B8A4E", "$type": "color", "$description": "Primitive feedback color. Reference via colour/feedback/* tokens." },
+    "700": { "$value": "#12653A", "$type": "color", "$description": "Primitive feedback color. Reference via colour/feedback/* tokens." }
+  },
+  "red": {
+    "100": { "$value": "#FDDCDC", "$type": "color", "$description": "Primitive feedback color. Reference via colour/feedback/* tokens." },
+    "500": { "$value": "#C92A2A", "$type": "color", "$description": "Primitive feedback color. Reference via colour/feedback/* tokens." },
+    "700": { "$value": "#951F1F", "$type": "color", "$description": "Primitive feedback color. Reference via colour/feedback/* tokens." }
+  },
+  "corner": {
+    "100": { "$value": 4,   "$type": "dimension", "$description": "Primitive radius step. Raw value — reference via semantic tokens." },
+    "200": { "$value": 8,   "$type": "dimension", "$description": "Primitive radius step. Open as a picker fallback for one-off rounding." },
+    "300": { "$value": 12,  "$type": "dimension", "$description": "Primitive radius step. Open as a picker fallback for one-off rounding." },
+    "400": { "$value": 16,  "$type": "dimension", "$description": "Primitive radius step. Open as a picker fallback for one-off rounding." },
+    "500": { "$value": 24,  "$type": "dimension", "$description": "Primitive radius step. Raw value — reference via semantic tokens." },
+    "600": { "$value": 80,  "$type": "dimension", "$description": "Primitive radius step. Raw value — reference via semantic tokens." },
+    "max": { "$value": 999, "$type": "dimension", "$description": "Fully-rounded primitive. Produces a pill on any element shorter than it is wide." }
+  },
+  "space": {
+    "100":  { "$value": 4,   "$type": "dimension", "$description": "Base unit. The 4px grid everything derives from." },
+    "200":  { "$value": 8,   "$type": "dimension", "$description": "2× base." },
+    "300":  { "$value": 12,  "$type": "dimension", "$description": "3× base. Open as a picker fallback for one-off spacing." },
+    "400":  { "$value": 16,  "$type": "dimension", "$description": "4× base. Open as a picker fallback for one-off spacing." },
+    "500":  { "$value": 24,  "$type": "dimension", "$description": "6× base. Open as a picker fallback for one-off spacing." },
+    "600":  { "$value": 32,  "$type": "dimension", "$description": "8× base. Open as a picker fallback for one-off spacing." },
+    "700":  { "$value": 48,  "$type": "dimension", "$description": "12× base." },
+    "800":  { "$value": 64,  "$type": "dimension", "$description": "16× base." },
+    "900":  { "$value": 96,  "$type": "dimension", "$description": "24× base." },
+    "1000": { "$value": 128, "$type": "dimension", "$description": "32× base. Ceiling of the scale." }
+  },
+  "family": {
+    "display": { "$value": "Alte Haas Grotesk", "$type": "fontFamily", "$description": "Display face. Bold weight only — the family ships Regular/Bold. Used for the oversized name treatment in hero/footer and for heading-1 section headers. Never for body copy." },
+    "primary":  { "$value": "Instrument Sans",   "$type": "fontFamily", "$description": "Workhorse family. Body text at all sizes, headings 2–3, labels, buttons, and navigation. Variable font — Regular 400, Medium 500, SemiBold 600 all in use." },
+    "mono":     { "$value": "IBM Plex Mono",     "$type": "fontFamily", "$description": "Annotation face. Captions, timestamps, image credits, project role/date metadata. Signals 'annotation', not 'code'. Never for running prose." }
+  }
+}

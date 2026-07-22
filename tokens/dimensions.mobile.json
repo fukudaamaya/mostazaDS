@@ -1,0 +1,91 @@
+{
+  "layout": {
+    "grid-columns":      { "$value": 4,    "$type": "number",    "$description": "Column count for the layout grid. Web uses 12 for flexible content arrangements; mobile uses 4, giving halves and quarters where a single column is not enough." },
+    "grid-gutter":       { "$value": 8,    "$type": "dimension", "$description": "Space between grid columns. Distinct from the spacing tokens — this is grid structure, not content rhythm." },
+    "max-content-width": { "$value": 9999, "$type": "dimension", "$description": "Mobile has no max-width constraint. 9999 is a Figma placeholder — in code this outputs 'none' (CSS) or double.infinity (Dart)." },
+    "max-text-width":    { "$value": 9999, "$type": "dimension", "$description": "Mobile has no max-text-width constraint. 9999 is a Figma placeholder — in code this outputs 'none' (CSS) or double.infinity (Dart)." }
+  },
+  "radius": {
+    "small":   { "$value": "{corner.100}", "$type": "dimension", "$description": "Tags and badges. Deliberately rectangular against an otherwise soft system — used rarely enough that the contrast reads as intent, not inconsistency." },
+    "medium":  { "$value": "{corner.200}", "$type": "dimension", "$description": "Input fields and small components. The quiet default where a pill would be too much." },
+    "large":   { "$value": "{corner.400}", "$type": "dimension", "$description": "Case study cards and content containers, roughly 720px wide. Scales with the element — a smaller radius would read as square at this size." },
+    "feature": { "$value": "{corner.500}", "$type": "dimension", "$description": "Large content surfaces — homepage case study thumbnails (~800px) and the article reader modal in the Write section. Scales with the element: at this width a smaller radius reads as square." },
+    "shell":   { "$value": "{corner.600}", "$type": "dimension", "$description": "The main content container's bottom corners, where it scrolls up over the footer. The site's signature curve — sets the rounding vocabulary everything else answers to." },
+    "pill":    { "$value": "{corner.max}", "$type": "dimension", "$description": "All buttons — primary and secondary. The shell's generous rounding makes fully-rounded buttons the consistent choice rather than an exception." }
+  },
+  "spacing": {
+    "inline-gap":         { "$value": "{space.200}", "$type": "dimension", "$description": "Adjacent elements that read as one unit — kicker to title, icon to label, tag to tag. Same in both modes; tight relationships don't loosen on desktop." },
+    "component-padding":  { "$value": "{space.200}", "$type": "dimension", "$description": "Internal padding of small components — buttons, tags, input fields. Tighter than card-padding." },
+    "content-gap":        { "$value": "{space.400}", "$type": "dimension", "$description": "Elements inside a single thought — heading to its body text, thumbnail to its caption, fields in a form. Close enough that they still read as one unit." },
+    "card-padding":       { "$value": "{space.400}", "$type": "dimension", "$description": "Internal padding of cards and content containers — project tiles, case study cards. Pair with colour/surface/default." },
+    "block-gap":          { "$value": "{space.500}", "$type": "dimension", "$description": "Separate units inside one section — title group to image, text block to media. Distinct thoughts, same section." },
+    "page-margin":        { "$value": "{space.400}", "$type": "dimension", "$description": "Left and right page gutters. Mobile sits at the 16px platform minimum; web pairs with the max-width container." },
+    "section-gap":        { "$value": "{space.700}", "$type": "dimension", "$description": "Between major sections — problem to solution, work to about. The page's structural rhythm." },
+    "signature-gap":      { "$value": "{space.800}", "$type": "dimension", "$description": "Hero and key-section breathing room. A signature moment — two or three uses site-wide, never the default." }
+  },
+  "type": {
+    "heading-1": {
+      "family":         { "$value": "{family.display}", "$type": "fontFamily", "$description": "Section headers and page titles. Uses the display face for signature weight — the only heading that does." },
+      "size":           { "$value": 40,  "$type": "dimension", "$description": "Page titles and major section headers. The largest tokenised type. One per section, never stacked." },
+      "weight":         { "$value": 700, "$type": "number",    "$description": "Bold only. Alte Haas Grotesk has no intermediate weights." },
+      "line-height":    { "$value": 44,  "$type": "dimension", "$description": "1.10 ratio — tight, so large type doesn't sprawl across the viewport." },
+      "letter-spacing": { "$value": -1,  "$type": "dimension", "$description": "Negative tracking tightens large type. The bigger the size, the more it needs." }
+    },
+    "heading-2": {
+      "family":         { "$value": "{family.primary}", "$type": "fontFamily", "$description": "Subsection headers. Switches to the body face — calmer than heading-1, so hierarchy reads through size not face." },
+      "size":           { "$value": 28,   "$type": "dimension", "$description": "Case study section headers and large card titles." },
+      "weight":         { "$value": 600,  "$type": "number",    "$description": "SemiBold — distinct from heading-1's bold without competing with it." },
+      "line-height":    { "$value": 34,   "$type": "dimension", "$description": "1.15 ratio." },
+      "letter-spacing": { "$value": -0.5, "$type": "dimension", "$description": "Negative tracking, scaled to size." }
+    },
+    "heading-3": {
+      "family":         { "$value": "{family.primary}", "$type": "fontFamily", "$description": "Subsection and list-group titles." },
+      "size":           { "$value": 20,    "$type": "dimension", "$description": "Smallest heading. Breaks up long case study prose into scannable chunks." },
+      "weight":         { "$value": 600,   "$type": "number",    "$description": "SemiBold, matching heading-2 for a consistent heading voice." },
+      "line-height":    { "$value": 26,    "$type": "dimension", "$description": "1.25 ratio — looser as size drops." },
+      "letter-spacing": { "$value": -0.25, "$type": "dimension", "$description": "Slight negative tracking." }
+    },
+    "body-large": {
+      "family":         { "$value": "{family.primary}", "$type": "fontFamily", "$description": "Lede and intro paragraphs." },
+      "size":           { "$value": 18, "$type": "dimension", "$description": "Case study intros, the opening 'here's the problem' paragraph, about-page lede. Sets up a section before body-medium takes over." },
+      "weight":         { "$value": 400, "$type": "number",    "$description": "Regular. Weight is never used to emphasise body copy — size and color do that." },
+      "line-height":    { "$value": 28, "$type": "dimension", "$description": "1.6 ratio — generous, for comfortable reading of longer passages." },
+      "letter-spacing": { "$value": 0,  "$type": "dimension", "$description": "No tracking adjustment at reading sizes." }
+    },
+    "body-medium": {
+      "family":         { "$value": "{family.primary}", "$type": "fontFamily", "$description": "Default reading text." },
+      "size":           { "$value": 16, "$type": "dimension", "$description": "The bulk of case study prose. Same in both modes — 16px is the readability floor on desktop and the comfortable default on mobile." },
+      "weight":         { "$value": 400, "$type": "number",    "$description": "Regular." },
+      "line-height":    { "$value": 25, "$type": "dimension", "$description": "1.6 ratio. Cap line length at 65–75 characters for long-form reading." },
+      "letter-spacing": { "$value": 0,  "$type": "dimension", "$description": "No tracking adjustment at reading sizes." }
+    },
+    "body-small": {
+      "family":         { "$value": "{family.primary}", "$type": "fontFamily", "$description": "Dense secondary content." },
+      "size":           { "$value": 14, "$type": "dimension", "$description": "Sidebar notes, in-prose image captions, compact secondary content. At the mobile minimum — never goes smaller." },
+      "weight":         { "$value": 400, "$type": "number",    "$description": "Regular." },
+      "line-height":    { "$value": 21, "$type": "dimension", "$description": "1.55 ratio." },
+      "letter-spacing": { "$value": 0,  "$type": "dimension", "$description": "No tracking adjustment at reading sizes." }
+    },
+    "label": {
+      "family":         { "$value": "{family.primary}", "$type": "fontFamily", "$description": "Interactive and form text." },
+      "size":           { "$value": 16,  "$type": "dimension", "$description": "Button text, form labels, navigation items. 16px suits a content-first site where each button is a moment, not a dense toolbar control." },
+      "weight":         { "$value": 500, "$type": "number",    "$description": "Medium. Distinguishes interactive text from body copy at the same size." },
+      "line-height":    { "$value": 22,  "$type": "dimension", "$description": "1.4 ratio — tight, since labels are single-line." },
+      "letter-spacing": { "$value": 0.1, "$type": "dimension", "$description": "Slight positive tracking improves legibility in buttons and separates label from body-medium." }
+    },
+    "label-small": {
+      "family":         { "$value": "{family.primary}", "$type": "fontFamily", "$description": "Small repeated UI text." },
+      "size":           { "$value": 12,  "$type": "dimension", "$description": "Tags on case study thumbnails, badges, chips. Non-interactive — no touch-target requirement. Never for anything read at length." },
+      "weight":         { "$value": 500, "$type": "number",    "$description": "Medium, matching label. Keeps the UI-text family visually consistent." },
+      "line-height":    { "$value": 16,  "$type": "dimension", "$description": "1.33 ratio — tight, since these always sit single-line inside a pill." },
+      "letter-spacing": { "$value": 0.2, "$type": "dimension", "$description": "More open than label — small text at medium weight needs the air, and it separates tags from caption at the same size." }
+    },
+    "caption": {
+      "family":         { "$value": "{family.mono}", "$type": "fontFamily", "$description": "Annotation face. Mono signals metadata, not code." },
+      "size":           { "$value": 12, "$type": "dimension", "$description": "Timestamps, image credits, project role/date lines. Pair with colour/text/tertiary. 12px is the floor — never smaller." },
+      "weight":         { "$value": 400, "$type": "number",    "$description": "Regular." },
+      "line-height":    { "$value": 18, "$type": "dimension", "$description": "1.5 ratio." },
+      "letter-spacing": { "$value": 0,  "$type": "dimension", "$description": "Mono is already wide — no tracking needed." }
+    }
+  }
+}

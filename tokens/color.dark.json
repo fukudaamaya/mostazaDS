@@ -1,0 +1,51 @@
+{
+  "colour": {
+    "text": {
+      "primary":      { "$value": "{neutral.50}",  "$type": "color", "$description": "Default reading text, headings, and body copy. The workhorse text color across the site." },
+      "secondary":    { "$value": "{neutral.200}", "$type": "color", "$description": "Supporting text, intro paragraphs, and metadata that still needs to read clearly. Sits below primary in hierarchy." },
+      "tertiary":     { "$value": "{neutral.300}", "$type": "color", "$description": "De-emphasised helper text, timestamps, and captions. Use at 14px+ to hold AA contrast." },
+      "disabled":     { "$value": "{neutral.700}", "$type": "color", "$description": "Disabled labels and inactive controls only. Intentionally below AA — never use for real content." },
+      "inverse":      { "$value": "{neutral.900}", "$type": "color", "$description": "Text and icons on dark or inverse surfaces. Pair with colour/surface/inverse." },
+      "brand":        { "$value": "{blue.300}",    "$type": "color", "$description": "Brand-colored display text for a signature moment only. Use at large sizes (3:1)." },
+      "link":         { "$value": "{blue.300}",    "$type": "color", "$description": "Inline links and interactive text. Calmer than brand blue and clears AA on the page background." },
+      "link-hover":   { "$value": "{blue.200}",    "$type": "color", "$description": "Hover and focus state for inline links. Darkens one step from the rest state — always keep the underline." },
+      "on-accent":    { "$value": "{neutral.900}", "$type": "color", "$description": "Label text and icons on a yellow accent fill. Always dark — yellow never carries light text. Pair with colour/accent/highlight or colour/surface/accent." },
+      "on-brand":     { "$value": "{neutral.0}",   "$type": "color", "$description": "Label text and icons on a primary action fill. Pair with colour/action/default." }
+    },
+    "surface": {
+      "page":       { "$value": "{neutral.950}",  "$type": "color", "$description": "The page background — the base everything sits on. Use for the body/canvas." },
+      "default":    { "$value": "{neutral.900}",  "$type": "color", "$description": "Card and content-container surfaces — project tiles, case study cards, inset panels. Sits one step off the page background. Pair with colour/text/primary." },
+      "secondary":  { "$value": "{neutral.900}",  "$type": "color", "$description": "Subtly recessed zones: alternating sections, code blocks, inset panels." },
+      "elevated":   { "$value": "{neutral.800}",  "$type": "color", "$description": "Cards, modals, and any content container lifted above the page. Pair with an elevation shadow." },
+      "inverse":    { "$value": "{neutral.50}",   "$type": "color", "$description": "Dark feature sections — a footer or a signature dark hero. Pair with colour/text/inverse." },
+      "overlay":    { "$value": "rgba(12, 17, 17, 0.70)", "$type": "color", "$description": "Scrim behind modals and bottom sheets. Raw RGBA for transparency. Darkens content beneath." },
+      "brand":      { "$value": "{blue.500}",     "$type": "color", "$description": "The one bold brand panel — a signature moment. Use sparingly. Pair with colour/text/on-brand." },
+      "accent":     { "$value": "{yellow.500}",   "$type": "color", "$description": "Yellow highlight panel — a featured-project marker or 'available for work' banner. Rare by design. Pair with colour/text/on-accent." }
+    },
+    "border": {
+      "default": { "$value": "{neutral.800}", "$type": "color", "$description": "Standard input borders and visible dividers." },
+      "focus":   { "$value": "{blue.400}",    "$type": "color", "$description": "Keyboard focus ring. Pair with an offset so it stays visible against the field." },
+      "strong":  { "$value": "{neutral.500}", "$type": "color", "$description": "Emphasised edges and selected states." }
+    },
+    "action": {
+      "default":  { "$value": "{blue.500}",    "$type": "color", "$description": "Primary button fill — Contact me, Download CV. Pair with colour/text/on-brand." },
+      "hover":    { "$value": "{blue.300}",    "$type": "color", "$description": "Hover state of the primary action." },
+      "pressed":  { "$value": "{blue.200}",    "$type": "color", "$description": "Active/pressed state of the primary action." },
+      "disabled": { "$value": "{neutral.700}", "$type": "color", "$description": "Disabled button fill. Pair with colour/text/disabled." }
+    },
+    "accent": {
+      "highlight":        { "$value": "{yellow.500}", "$type": "color", "$description": "Rare signature highlight: a featured-project marker or CV-download flag. Behind dark text only — never as text." },
+      "highlight-subtle": { "$value": "{yellow.300}", "$type": "color", "$description": "Soft highlight wash, e.g. a marker behind primary text." }
+    },
+    "feedback": {
+      "success-text":    { "$value": "{green.100}",  "$type": "color", "$description": "Success confirmation text and icons, e.g. 'Message sent'. Clears AA on white." },
+      "success-surface": { "$value": "{green.700}",  "$type": "color", "$description": "Background of a success message block." },
+      "warning-text":    { "$value": "{yellow.50}",  "$type": "color", "$description": "Cautionary helper text and icons. Distinct from the brand highlight yellow." },
+      "warning-surface": { "$value": "{yellow.900}", "$type": "color", "$description": "Background of a warning message block." },
+      "error-text":      { "$value": "{red.100}",    "$type": "color", "$description": "Validation errors and required-field messages. Clears AA on white." },
+      "error-surface":   { "$value": "{red.700}",    "$type": "color", "$description": "Background of an error message block." },
+      "info-text":       { "$value": "{blue.200}",   "$type": "color", "$description": "Informational message text and icons, e.g. 'This project is under NDA'. Reuses brand blue deliberately — info is brand-flavoured here." },
+      "info-surface":    { "$value": "{blue.800}",   "$type": "color", "$description": "Neutral informational notices — background of an info message block." }
+    }
+  }
+}

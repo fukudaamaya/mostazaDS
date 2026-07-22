@@ -1,0 +1,31 @@
+{
+  "name": "mostaza-ds",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "build:tokens": "node style-dictionary/config.mjs && node scripts/generate-dart.mjs",
+    "sync": "node scripts/sync-figma.mjs && npm run build:tokens",
+    "prebuild-storybook": "npm run build:tokens"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^8.0.0",
+    "@storybook/addon-docs": "^8.0.0",
+    "@storybook/addon-essentials": "^8.0.0",
+    "@storybook/addon-toolbars": "^8.0.0",
+    "@storybook/react": "^8.0.0",
+    "@storybook/react-vite": "^8.0.0",
+    "storybook": "^8.0.0",
+    "style-dictionary": "^4.0.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.0",
+    "vite": "^5.3.0"
+  }
+}
