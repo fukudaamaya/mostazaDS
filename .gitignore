@@ -1,4 +1,6 @@
 node_modules/
 build/dart/
+storybook-static/
 .env.local
 *.local
+.vercel
