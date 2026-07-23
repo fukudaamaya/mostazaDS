@@ -1,6 +1,6 @@
 # Mostaza DS
 
-Design system token pipeline for the Mostaza design system. Single source of truth flows from Figma → JSON → CSS + Dart.
+Design system token pipeline for the Mostaza design system. Single source of truth flows from `tokens/*.json` → CSS + Dart, with Storybook docs published at [mostaza-ds.vercel.app](https://mostaza-ds.vercel.app).
 
 ## What's in the box
 
@@ -8,24 +8,37 @@ Design system token pipeline for the Mostaza design system. Single source of tru
 |--------|------|---------|
 | CSS custom properties | `build/css/tokens.css` | Web apps |
 | Dart ThemeExtension | `build/dart/app_*.dart` | Flutter |
-| Storybook docs | `http://localhost:6006` | Design + eng |
+| Storybook docs | [mostaza-ds.vercel.app](https://mostaza-ds.vercel.app) | Design + eng |
 | Token JSON | `tokens/*.json` | Source of truth |
 
 ## Quick start
 
 ```bash
 npm install
-npm run build:tokens   # generate CSS + Dart
+npm run build:tokens   # generate CSS + Dart from token JSON
 npm run storybook      # open docs at localhost:6006
 ```
 
-## Syncing from Figma
+## Updating tokens
+
+Edit the token JSON files in `tokens/` directly, then rebuild and push:
 
 ```bash
-FIGMA_TOKEN=figd_xxx npm run sync
+# 1. Edit one or more token files
+#    tokens/primitives.json        — raw hex values, spacing, font families
+#    tokens/color.light.json       — semantic colour aliases (light mode)
+#    tokens/color.dark.json        — semantic colour aliases (dark mode)
+#    tokens/dimensions.web.json    — type scale, spacing, layout (web)
+#    tokens/dimensions.mobile.json — type scale, spacing, layout (mobile)
+
+# 2. Rebuild CSS + Dart output
+npm run build:tokens
+
+# 3. Push — Vercel redeploys automatically
+git add tokens/ build/css/ && git commit -m "chore: update tokens" && git push
 ```
 
-Diffs the live Figma variables against the current token JSON, writes a dated entry to `changelog/diffs/`, prepends to `CHANGELOG.md`, updates the JSON files, and rebuilds CSS + Dart.
+Vercel picks up every push to `main` and redeploys [mostaza-ds.vercel.app](https://mostaza-ds.vercel.app) within ~30 seconds.
 
 ## Token structure
 
